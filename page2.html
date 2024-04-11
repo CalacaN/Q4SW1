@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #ffcccc; 
+            padding-top: 50px; 
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background-color: #ffffff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            text-align: center; 
+        }
+        .result { 
+            color: #17a2b8; 
+            font-size: 24px; 
+            margin-top: 20px; 
+        }
+        .nav-btn { 
+            margin-top: 20px; 
+        }
+        .centered-image {
+            display: block;
+            margin: 20px auto; 
+            max-width: 100%; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Peso to Yen Conversion</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzzV4nnR7rXPwEpwXbjZMPnMP3warI0Vy9BXbH8vsrmQ&s" class="centered-image" alt="GIF Image">
+    <p>Click the button to convert 100 Pesos to Yen.</p>
+    <button class="btn btn-info" onclick="convertToYen()">Convert</button>
+    <div id="conversionResult" class="result"></div>
+    <a href="index.html" class="btn btn-secondary nav-btn">Back to main page</a>
+    <a href="page3.html" class="btn btn-secondary nav-btn">Euro</a>
+</div>
+
+<script>
+    function convertToYen() {
+        var pesos = 100;
+        var exchangeRate = 2.33; 
+        document.getElementById("conversionResult").innerHTML = `100 Pesos is equivalent to ¥${(pesos * exchangeRate).toFixed(2)}`;
+    }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seatwork 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #ffcccc; /* Light pink background */
+            padding-top: 50px; /* Add padding to top to account for fixed navbar */
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background-color: #ffffff; /* White container background */
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            text-align: center; /* Center align content */
+        
+        }
+        .result { 
+            color: #28a745; 
+            font-size: 24px; 
+            margin-top: 20px; 
+        }
+        .nav-btn { 
+            margin-top: 20px; 
+        }
+        .centered-image {
+            display: block;
+            margin: 20px auto; /* Center the image horizontally */
+            max-width: 100%; /* Ensure image doesn't exceed container width */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Click the buttons below to convert 100 pesos to other currencies</h1>
+    <iframe src="https://giphy.com/embed/f8boxoFEnl9e3uaCfj" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bombaysoftwares-money-finance-growing-f8boxoFEnl9e3uaCfj">via GIPHY</a></p>
+    <div id="conversionResult" class="result"></div>
+    <a href="page2.html" class="btn btn-secondary nav-btn">Yen</a>
+    <a href="page3.html" class="btn btn-secondary nav-btn">Euro</a>
+</div>
+
+<script>
+    function convertToDollar() {
+        var pesos = 100;
+        var exchangeRate = 0.018; 
+        document.getElementById("conversionResult").innerHTML = `100 Pesos is equivalent to $${(pesos * exchangeRate).toFixed(2)}`;
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
